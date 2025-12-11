@@ -1,0 +1,53 @@
+{
+    "name": "Velgress Mini",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0",
+        "arcade-character-animations": "github:wboodon/arcade-character-animations#v0.1.2",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "player-sprite.ts",
+        "images.g.jres",
+        "images.g.ts",
+        "util.ts",
+        "tile-sprite.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "2.0.62",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj",
+    "palette": [
+        "#000000",
+        "#FFF8C0",
+        "#FFCC68",
+        "#8BD0BA",
+        "#EC8A4B",
+        "#80AC40",
+        "#55A894",
+        "#D44E52",
+        "#B27E56",
+        "#5C7A56",
+        "#38607C",
+        "#84545C",
+        "#3E5442",
+        "#2A2A3A",
+        "#523C4E",
+        "#101024"
+    ]
+}

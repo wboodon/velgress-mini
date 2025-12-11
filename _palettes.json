@@ -1,0 +1,28 @@
+{
+    "nextPaletteID": 2,
+    "palettes": {
+        "custom1": {
+            "id": "custom1",
+            "name": "Equpix15 by Night",
+            "colors": [
+                "#000000",
+                "#FFF8C0",
+                "#FFCC68",
+                "#8BD0BA",
+                "#EC8A4B",
+                "#80AC40",
+                "#55A894",
+                "#D44E52",
+                "#B27E56",
+                "#5C7A56",
+                "#38607C",
+                "#84545C",
+                "#3E5442",
+                "#2A2A3A",
+                "#523C4E",
+                "#101024"
+            ],
+            "custom": true
+        }
+    }
+}
