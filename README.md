@@ -1,7 +1,43 @@
- 
-
-
+# Velgress Mini 
+> A recreation of Velgress from UFO 50 for MakeCode Arcade!
 > Open this page at [https://wboodon.github.io/velgress-mini/](https://wboodon.github.io/velgress-mini/)
+
+## Milestones for 1.0.0
+Once all these changes are made, it'll be version 1.0.0
+
+### Major Additions
+ - Add enemies
+    - Enemy spawning
+    - Stun animation
+    - Enemy animations
+    - Bounce on enemy's head
+    - Enemies destroyed by spike
+ - Add coins
+    - Coin spawning
+    - Score system
+ - Add random jump block, coin block, stone blocks
+    - Replace cloud blocks?
+    - Hold jump on jump block to blitz through level
+ - Sound effects
+    - Shoot
+    - Double jump
+    - Blocks destroyed by spike
+    - Enemy destroyed
+    - Coin collected
+    - Jump block
+    - Bouncing on enemy's head
+
+### Minor Additions
+- Double jump animation
+- Hold jump
+- Cloud animations
+- High score mechanic
+
+### Fixes
+- Clouds are sometimes destroyed when you jump off the block below them
+- Block destruction isn't started if you're standing on its edge
+- Adjust random block generation to better match the game
+
 
 ## Use as Extension
 
