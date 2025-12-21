@@ -26,12 +26,18 @@ Once all these changes are made, it'll be version 1.0.0
     - Coin collected
     - Jump block
     - Bouncing on enemy's head
+ - UI/UX Overhaul
+    - Start menu
+    - Optional tutorial/instructions
+    - Better game over screen
 
 ### Minor Additions
 - Double jump animation
 - Hold jump
 - Cloud animations
 - High score mechanic
+- Spike sprite/animation
+- Particles for block destruction
 
 ### Fixes
 - Clouds are sometimes destroyed when you jump off the block below them
