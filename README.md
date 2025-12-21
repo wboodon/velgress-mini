@@ -6,27 +6,30 @@
 Once all these changes are made, it'll be version 1.0.0
 
 ### Major Additions
- - Add enemies
+- Combat
+    - Enemy behavior
     - Enemy spawning
     - Stun animation
     - Enemy animations
     - Bounce on enemy's head
     - Enemies destroyed by spike
- - Add coins
+- Score
     - Coin spawning
+    - Coin animation
     - Score system
- - Add random jump block, coin block, stone blocks
-    - Replace cloud blocks?
-    - Hold jump on jump block to blitz through level
- - Sound effects
+    - Coin tiles
+- Add random tiles
+    - Stone, coin, and jump tiles can replace cloud tiles randomly
+    - Hold jump on jump tile to blitz through level
+- Sound effects
     - Shoot
     - Double jump
-    - Blocks destroyed by spike
+    - Tiles destroyed by spike
     - Enemy destroyed
     - Coin collected
-    - Jump block
+    - Jump tile
     - Bouncing on enemy's head
- - UI/UX Overhaul
+- UI/UX Overhaul
     - Start menu
     - Optional tutorial/instructions
     - Better game over screen
@@ -37,12 +40,17 @@ Once all these changes are made, it'll be version 1.0.0
 - Cloud animations
 - High score mechanic
 - Spike sprite/animation
-- Particles for block destruction
+- Particles for tile destruction
+- Better looking floor markers
 
 ### Fixes
-- Clouds are sometimes destroyed when you jump off the block below them
-- Block destruction isn't started if you're standing on its edge
-- Adjust random block generation to better match the game
+- Clouds are sometimes destroyed when you jump off the tile below them
+- Tile destruction isn't started if you're standing on its edge
+- Adjust random tile generation to better match the game
+- Z-sorting issues
+    - Tile sprites render in front of player
+    - Tile sprites render in front of floor markers
+- The tiles at the start of the level are ugly
 
 
 ## Use as Extension
