@@ -59,6 +59,10 @@ namespace tower {
         private imageWidth = 8;
         private imageHeight = 8;
 
+        private coyoteTime = false;
+        private maxAirJumps = 1;
+        private airJumpsUsed = 0;
+
         playerNum = 1
         lastVy: number = 0
         
@@ -75,6 +79,8 @@ namespace tower {
             this.setupAnimations();
 
             const floorDetector = new FloorDetectorSprite(this);
+
+
 
         }
 
@@ -118,12 +124,15 @@ namespace tower {
         }
 
 
-        private coyoteTime = false;
+        
         private setupControls(): void {
             controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, () => {
                 if (this.coyoteTime || this.isHittingTile(CollisionDirection.Bottom)) {
                     this.coyoteTime = false;
                     this.wasOnGround = false;
+                    this.vy = jumpSpeed;
+                } else if (this.airJumpsUsed < this.maxAirJumps) {
+                    this.airJumpsUsed += 1;
                     this.vy = jumpSpeed;
                 }
             })
@@ -133,29 +142,6 @@ namespace tower {
                     this.vy = 0;
                 }
             })
-
-            /*
-            controller.B.onEvent(ControllerButtonEvent.Pressed, () => {
-
-                timer.throttle("shoot", shootInterval, () => {
-                    let directionY = 0;
-                    if (characterAnimations.matchesRule(this, Predicate.LookingUp)) directionY = -1;
-                    if (characterAnimations.matchesRule(this, Predicate.LookingDown)) directionY = 1;
-                    if (directionY) {
-                        let projectile = sprites.createProjectileFromSprite(assets.image`playerBullet`, this, 0, 200 * directionY);
-                        projectile.flags |= SpriteFlag.GhostThroughWalls;
-                    } else {
-                        let directionX = (characterAnimations.matchesRule(this, Predicate.FacingRight) ? 1 : -1);
-                        let projectile = sprites.createProjectileFromSprite(assets.image`playerBullet`, this, 200 * directionX, 0);
-                        projectile.flags |= SpriteFlag.GhostThroughWalls;
-                    }
-                })
-                
-            })
-            */
-
-            
-
         }
 
         private wasOnGround = false;
@@ -196,6 +182,8 @@ namespace tower {
                 timer.debounce("startCoyoteTime", 100, () => {
                     this.coyoteTime = false;
                 })
+            } else if (isOnGround && !this.wasOnGround) {
+                this.airJumpsUsed = 0;
             }
 
             this.wasOnGround = isOnGround;

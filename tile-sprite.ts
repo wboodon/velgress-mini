@@ -7,6 +7,8 @@ enum TileType {
     Stone,
     Box
 }
+
+
 //% block="Tower" weight=100 color=#0fbc11 icon=""
 namespace tower {
 
@@ -80,6 +82,29 @@ namespace tower {
         const oldLocation = sprite.tilemapLocation();
         const newLocation = tiles.getTileLocation(oldLocation.col, oldLocation.row + 8);
         moveTileSprite(sprite, newLocation);
+    }
+
+    export function placeTileTemplate(template: Image, startColumn: number, startRow: number): void {
+        for (let i = 0; i < template.width; i++) {
+            for (let j = 0; j < template.height; j++) {
+                let val = template.getPixel(i, j);
+                switch (val) {
+                    case 1:
+                        createTileSprite(TileType.Cloud, tiles.getTileLocation(i + startColumn, j + startRow));
+                        break;
+                    case 2:
+                        createTileSprite(TileType.Box, tiles.getTileLocation(i + startColumn, j + startRow));
+                        break;
+                    case 3:
+                        if (Math.percentChance(10))
+                            createTileSprite(TileType.Cloud, tiles.getTileLocation(i + startColumn, j + startRow));
+                        break;
+                    case 4:
+                        createTileSprite(TileType.Stone, tiles.getTileLocation(i + startColumn, j + startRow));
+                        break;
+                }
+            }
+        }
     }
 
     enum TileFlags {
@@ -175,4 +200,7 @@ namespace tower {
             return true;
         }
     }
+    
+
+    
 }

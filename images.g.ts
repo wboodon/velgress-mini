@@ -219,6 +219,61 @@ e b d b b b d d
 d b b e b d d e 
 e d e e d e e e 
 `;
+            case "image17":
+            case "templateBoxLineRight":return img`
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+. . . . . . . . . 
+2 2 2 2 2 2 2 2 2 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . 1 4 4 1 . . 
+. . . . . . . . . 
+`;
+            case "image19":
+            case "templateClouds":return img`
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+`;
+            case "image18":
+            case "templateRoomLeft":return img`
+3 3 3 3 3 3 3 3 3 
+. . . . . . . . . 
+. . . . . . . . . 
+4 4 4 4 4 . 1 1 1 
+. . . . 2 . . . . 
+. . . . 2 . . . . 
+. . 4 4 4 4 4 . . 
+. . . . . . . . . 
+`;
+            case "image20":
+            case "templateBoxLineLeft":return img`
+3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 
+. . . . . . . . . 
+2 2 2 2 2 2 2 2 2 
+. . . . . . . . . 
+. . . . . . . . . 
+. . 1 4 4 1 . . . 
+. . . . . . . . . 
+`;
+            case "image21":
+            case "templateRoomRight":return img`
+3 3 3 3 3 3 3 3 3 
+. . . . . . . . . 
+. . . . . . . . . 
+1 1 1 . 4 4 4 4 4 
+. . . . 2 . . . . 
+. . . . 2 . . . . 
+. . 4 4 4 4 4 . . 
+. . . . . . . . . 
+`;
         }
         return null;
     })

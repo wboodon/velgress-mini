@@ -79,6 +79,31 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "stoneTileDamaged"
     },
+    "image17": {
+        "data": "hwQJAAgAAAAzIAAAMyAAADMgAAAzIAABMyAABDMgAAQzIAABMyAAADMgAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateBoxLineRight"
+    },
+    "image19": {
+        "data": "hwQJAAgAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateClouds"
+    },
+    "image18": {
+        "data": "hwQJAAgAAAADQAAAA0AAAANAAAQDQAAEA0AiBAMAAAQDEAAEAxAAAAMQAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateRoomLeft"
+    },
+    "image20": {
+        "data": "hwQJAAgAAAAzIAAAMyAAADMgAAEzIAAEMyAABDMgAAEzIAAAMyAAADMgAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateBoxLineLeft"
+    },
+    "image21": {
+        "data": "hwQJAAgAAAADEAAAAxAAAAMQAAQDAAAEA0AiBANAAAQDQAAEA0AAAANAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateRoomRight"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",
