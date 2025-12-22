@@ -51,6 +51,8 @@ Once all these changes are made, it'll be version 1.0.0
     - Tile sprites render in front of player
     - Tile sprites render in front of floor markers
 - The tiles at the start of the level are ugly
+- Shooting randomly stops working
+- Particles aren't shifted down when everything else is
 
 
 ## Use as Extension
