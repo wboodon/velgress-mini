@@ -25,57 +25,53 @@ sprites.onOverlap(SpriteKind.FloorDetector, SpriteKind.TowerTile, function (spri
         }
     }
 })
+// let column, row;
+// for (let index = 0; index < 10; index++) {
+// column = randint(1, 9)
+// row = randint(0, 7) + offsetY
+// cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(column, row))
+// }
+// // right side
+// 
+// tower.placeTileTemplate(assets.image`templateBoxLineRight`, 10, offsetY);
+// 
+// for (let index = 0; index < 5; index++) {
+// column = randint(10, 18)
+// row = randint(0, 7) + offsetY
+// cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(column, row))
+// }
+// for (let column2 = 10; column2 < 19; column2++) {
+// let box = tower.createTileSprite(
+// TileType.Box,
+// tiles.getTileLocation(column2, 2 + offsetY)
+// )
+// }
+// 
+// cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(13, 5 + offsetY))
+// stone = tower.createTileSprite(TileType.Stone, tiles.getTileLocation(14, 5 + offsetY))
+// stone = tower.createTileSprite(TileType.Stone, tiles.getTileLocation(15, 5 + offsetY))
+// cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(16, 5 + offsetY))
 function makeFloor (floorNum: number) {
     offsetY = floorNum == 1 ? 16 : (floorNum == 2 ? 8 : 0);
-
-    // left side
-    layout = randint(0, 2)
+// left side
+    layout = randint(0, 3)
     let layoutImage: Image;
-    switch(layout) {
+switch(layout) {
         case 1: layoutImage = assets.image`templateBoxLineLeft`; break;
         case 2: layoutImage = assets.image`templateRoomLeft`; break;
-        case 0: 
+        case 3: layoutImage = assets.image`templateWideClouds`; break;
         default: layoutImage = assets.image`templateClouds`; break;
     }
-    tower.placeTileTemplate(layoutImage, 1, offsetY);
-    
-    // right side
+tower.placeTileTemplate(layoutImage, 1, offsetY);
+// right side
     layout = randint(0, 2)
     switch (layout) {
         case 1: layoutImage = assets.image`templateBoxLineRight`; break;
         case 2: layoutImage = assets.image`templateRoomRight`; break;
-        case 0:
+        case 3: layoutImage = assets.image`templateWideClouds`; break;
         default: layoutImage = assets.image`templateClouds`; break;
     }
-    tower.placeTileTemplate(layoutImage, 10, offsetY);
-/*
-let column, row;
-for (let index = 0; index < 10; index++) {
-        column = randint(1, 9)
-        row = randint(0, 7) + offsetY
-        cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(column, row))
-    }
-    // right side
-
-    tower.placeTileTemplate(assets.image`templateBoxLineRight`, 10, offsetY);
-    /*
-        for (let index = 0; index < 5; index++) {
-        column = randint(10, 18)
-        row = randint(0, 7) + offsetY
-        cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(column, row))
-    }
-    for (let column2 = 10; column2 < 19; column2++) {
-        let box = tower.createTileSprite(
-            TileType.Box,
-            tiles.getTileLocation(column2, 2 + offsetY)
-        )
-    }
-    
-cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(13, 5 + offsetY))
-    stone = tower.createTileSprite(TileType.Stone, tiles.getTileLocation(14, 5 + offsetY))
-    stone = tower.createTileSprite(TileType.Stone, tiles.getTileLocation(15, 5 + offsetY))
-    cloud = tower.createTileSprite(TileType.Cloud, tiles.getTileLocation(16, 5 + offsetY))
-    */
+tower.placeTileTemplate(layoutImage, 10, offsetY);
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.TowerTile, function (sprite, otherSprite) {
     if (otherSprite instanceof tower.TileSprite) {
@@ -92,19 +88,17 @@ scene.onHitWall(SpriteKind.Projectile, function (sprite, location) {
         tiles.setWallAt(location, false)
     }
 })
-/**
- * if(towerModule)
- */
-/**
- * towerModule`hello`;
- */
-let stone: tower.TileSprite = null
-let cloud: tower.TileSprite = null
-let layout = 0
-let playerSprite: tower.PlayerSprite = null
-let offsetY = 0
-let textSprite = null
 let playerLocation: tiles.Location = null
+let textSprite = null
+let offsetY = 0
+let playerSprite: tower.PlayerSprite = null
+let layout = 0
+let cloud = null
+// if(towerModule)
+// 
+// 
+// towerModule`hello`;
+let stone = null
 scene.setBackgroundColor(15)
 let layoutTypes = ["sparseClouds", "boxLine"]
 let tilemap1 = tileUtil.createSmallMap(tilemap`level0`)

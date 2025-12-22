@@ -5,7 +5,9 @@ namespace SpriteKind {
 enum TileType {
     Cloud,
     Stone,
-    Box
+    Box,
+    Jump,
+    Coin
 }
 
 
@@ -44,6 +46,20 @@ namespace tower {
             damagedImage: assets.image`boxTileDamaged`,
             isOneWay: false,
             hp: 333,
+            instantBreak: false
+        },
+        [TileType.Jump]: {
+            undamagedImage: assets.image`jumpTile`,
+            damagedImage: assets.image`jumpTile`,
+            isOneWay: false,
+            hp: 5000,
+            instantBreak: false
+        },
+        [TileType.Coin]: {
+            undamagedImage: assets.image`coinTile`,
+            damagedImage: assets.image`coinTile`,
+            isOneWay: false,
+            hp: 2500,
             instantBreak: false
         }
     }
@@ -90,7 +106,15 @@ namespace tower {
                 let val = template.getPixel(i, j);
                 switch (val) {
                     case 1:
-                        createTileSprite(TileType.Cloud, tiles.getTileLocation(i + startColumn, j + startRow));
+                        const randNum = randint(0, 999);
+                        if (randNum < 120)
+                            createTileSprite(TileType.Stone, tiles.getTileLocation(i + startColumn, j + startRow));
+                        else if (randNum < 125)
+                            createTileSprite(TileType.Coin, tiles.getTileLocation(i + startColumn, j + startRow));
+                        else if (randNum < 128)
+                            createTileSprite(TileType.Jump, tiles.getTileLocation(i + startColumn, j + startRow));
+                        else
+                            createTileSprite(TileType.Cloud, tiles.getTileLocation(i + startColumn, j + startRow));
                         break;
                     case 2:
                         createTileSprite(TileType.Box, tiles.getTileLocation(i + startColumn, j + startRow));
@@ -134,6 +158,9 @@ namespace tower {
                 this.tileFlags |= TileFlags.OneWay;
             else
                 tiles.setWallAt(location, true)
+
+            if(tileType == TileType.Jump)
+                this.startEffect(effects.bubbles);
             
         }
 

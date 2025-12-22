@@ -19,8 +19,8 @@ Once all these changes are made, it'll be version 1.0.0
     - Score system
     - Coin tiles
 - Add random tiles
-    - Stone, coin, and jump tiles can replace cloud tiles randomly
     - Hold jump on jump tile to blitz through level
+    - ~~Stone, coin, and jump tiles can replace cloud tiles randomly~~
 - Sound effects
     - Shoot
     - Double jump

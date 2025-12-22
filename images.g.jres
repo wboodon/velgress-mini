@@ -79,30 +79,45 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "stoneTileDamaged"
     },
-    "image17": {
-        "data": "hwQJAAgAAAAzIAAAMyAAADMgAAAzIAABMyAABDMgAAQzIAABMyAAADMgAAA=",
+    "image21": {
+        "data": "hwQJAAgAAAABEAAAARAAAAAQAAQAAAAEAEAiBABAAAQAQAAEAUAAAAFAAAA=",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "templateBoxLineRight"
-    },
-    "image19": {
-        "data": "hwQJAAgAAAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM=",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "templateClouds"
+        "displayName": "templateRoomRight"
     },
     "image18": {
-        "data": "hwQJAAgAAAADQAAAA0AAAANAAAQDQAAEA0AiBAMAAAQDEAAEAxAAAAMQAAA=",
+        "data": "hwQJAAgAAAABQAAAAUAAAABAAAQAQAAEACAiBAAAAAQAEAAEARAAAAEQAAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "templateRoomLeft"
     },
     "image20": {
-        "data": "hwQJAAgAAAAzIAAAMyAAADMgAAEzIAAEMyAABDMgAAEzIAAAMyAAADMgAAA=",
+        "data": "hwQJAAgAAAAAIAAAASAAAAAgAAEAIAAEACAABAAgAAEAIAAAECAAAAAgAAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "templateBoxLineLeft"
     },
-    "image21": {
-        "data": "hwQJAAgAAAADEAAAAxAAAAMQAAQDAAAEA0AiBANAAAQDQAAEA0AAAANAAAA=",
+    "image17": {
+        "data": "hwQJAAgAAAAAIAAAASAAAAAgAAAAIAABACAABAAgAAQAIAABECAAAAAgAAA=",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "templateRoomRight"
+        "displayName": "templateBoxLineRight"
+    },
+    "image22": {
+        "data": "hwQJAAgAAAAAAAAAAAEAAQABAAEAAAABAAAAAAAAAQAQAAEAAAABAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateWideClouds"
+    },
+    "image19": {
+        "data": "hwQJAAgAAAAAABAAEAAAAAAAAAAAAAAAAAEAEAAAAAAAAAEAAQAAAAAAEAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "templateClouds"
+    },
+    "image23": {
+        "data": "hwQIAAgAAAAaY63aGtPS2j3WIdIaHSLaGi0i2j3WItIa09LaGmOt2g==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "jumpTile"
+    },
+    "image24": {
+        "data": "hwQIAAgAAABy+/+317133XIrQrdyIiK0ciIitHIrQrfXvXfdcvv/tw==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "coinTile"
     },
     "anim1": {
         "namespace": "myAnimations",

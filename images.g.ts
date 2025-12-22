@@ -219,53 +219,9 @@ e b d b b b d d
 d b b e b d d e 
 e d e e d e e e 
 `;
-            case "image17":
-            case "templateBoxLineRight":return img`
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-. . . . . . . . . 
-2 2 2 2 2 2 2 2 2 
-. . . . . . . . . 
-. . . . . . . . . 
-. . . 1 4 4 1 . . 
-. . . . . . . . . 
-`;
-            case "image19":
-            case "templateClouds":return img`
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-`;
-            case "image18":
-            case "templateRoomLeft":return img`
-3 3 3 3 3 3 3 3 3 
-. . . . . . . . . 
-. . . . . . . . . 
-4 4 4 4 4 . 1 1 1 
-. . . . 2 . . . . 
-. . . . 2 . . . . 
-. . 4 4 4 4 4 . . 
-. . . . . . . . . 
-`;
-            case "image20":
-            case "templateBoxLineLeft":return img`
-3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 
-. . . . . . . . . 
-2 2 2 2 2 2 2 2 2 
-. . . . . . . . . 
-. . . . . . . . . 
-. . 1 4 4 1 . . . 
-. . . . . . . . . 
-`;
             case "image21":
             case "templateRoomRight":return img`
-3 3 3 3 3 3 3 3 3 
+1 1 . . . . . 1 1 
 . . . . . . . . . 
 . . . . . . . . . 
 1 1 1 . 4 4 4 4 4 
@@ -273,6 +229,83 @@ e d e e d e e e
 . . . . 2 . . . . 
 . . 4 4 4 4 4 . . 
 . . . . . . . . . 
+`;
+            case "image18":
+            case "templateRoomLeft":return img`
+1 1 . . . . . 1 1 
+. . . . . . . . . 
+. . . . . . . . . 
+4 4 4 4 2 . 1 1 1 
+. . . . 2 . . . . 
+. . . . 2 . . . . 
+. . 4 4 4 4 4 . . 
+. . . . . . . . . 
+`;
+            case "image20":
+            case "templateBoxLineLeft":return img`
+. 1 . . . . . . . 
+. . . . . . . 1 . 
+. . . . . . . . . 
+2 2 2 2 2 2 2 2 2 
+. . . . . . . . . 
+. . . . . . . . . 
+. . 1 4 4 1 . . . 
+. . . . . . . . . 
+`;
+            case "image17":
+            case "templateBoxLineRight":return img`
+. 1 . . . . . . . 
+. . . . . . . 1 . 
+. . . . . . . . . 
+2 2 2 2 2 2 2 2 2 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . 1 4 4 1 . . 
+. . . . . . . . . 
+`;
+            case "image22":
+            case "templateWideClouds":return img`
+. . . . . . . . . 
+. . . . . . 1 . . 
+. 1 1 . . . . . . 
+. . . . . . . . . 
+. . . . . 1 1 1 . 
+. . . . . . . . . 
+. 1 1 1 . . . . . 
+. . . . . . . . . 
+`;
+            case "image19":
+            case "templateClouds":return img`
+. . . . . . . 1 . 
+. 1 . . . . . . . 
+. . . . 1 . . . . 
+. . . . . . . . . 
+. . . . . . 1 . . 
+1 . . . . . . . 1 
+. . . . . . . . . 
+. . . . 1 . . . . 
+`;
+            case "image23":
+            case "jumpTile":return img`
+a a d a a d a a 
+1 1 3 1 1 3 1 1 
+3 3 6 d d 6 3 3 
+6 d d 1 2 d d 6 
+d 2 1 2 2 2 2 d 
+a d 2 2 2 2 d a 
+a a 2 a a 2 a a 
+d d d d d d d d 
+`;
+            case "image24":
+            case "coinTile":return img`
+2 7 2 2 2 2 7 2 
+7 d 7 7 7 7 d 7 
+b d b 2 2 b d b 
+f b 2 2 2 2 b f 
+f 7 2 2 2 2 7 f 
+f 7 4 2 2 4 7 f 
+7 d 7 4 4 7 d 7 
+b d b b b b d b 
 `;
         }
         return null;
