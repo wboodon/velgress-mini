@@ -104,9 +104,16 @@ namespace tower {
         for (let i = 0; i < template.width; i++) {
             for (let j = 0; j < template.height; j++) {
                 let val = template.getPixel(i, j);
+                const randNum = randint(0, 999);
                 switch (val) {
+                    case 0:
+                        if (randNum < 7)
+                            tiles.placeOnTile(
+                                sprites.create(assets.image`coin`, SpriteKind.Coin),
+                                tiles.getTileLocation(startColumn + i, startRow + j)
+                            );
+                        break;
                     case 1:
-                        const randNum = randint(0, 999);
                         if (randNum < 120)
                             createTileSprite(TileType.Stone, tiles.getTileLocation(i + startColumn, j + startRow));
                         else if (randNum < 125)

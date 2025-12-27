@@ -4,6 +4,7 @@ namespace SpriteKind {
     export const Spikes = SpriteKind.create()
     export const FloorLabel = SpriteKind.create()
     export const FloorDetector = SpriteKind.create()
+    export const Coin = SpriteKind.create()
 }
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     if (!(sprite instanceof tower.PlayerSprite)) {
@@ -159,10 +160,20 @@ game.onUpdate(function () {
         for (let value2 of sprites.allOfKind(SpriteKind.Projectile)) {
             value2.y += 64
         }
+        for (let value2 of sprites.allOfKind(SpriteKind.Coin)) {
+            value2.y += 64
+            if (value2.bottom > scene.cameraProperty(CameraProperty.Bottom) - 4)
+                sprites.destroy(value2)
+
+        }
         currentFloor += 1
         makeFloor(currentFloor + 1)
         floorLabel1.setText((currentFloor + 1).toString())
         floorLabel2.setText(currentFloor.toString())
         floorLabel3.setText((currentFloor - 1).toString())
     }
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Coin, function(sprite: Sprite, otherSprite: Sprite) {
+    sprites.destroy(otherSprite);
+    info.changeScoreBy(1)
 })

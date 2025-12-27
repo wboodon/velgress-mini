@@ -14,10 +14,10 @@ Once all these changes are made, it'll be version 1.0.0
     - Bounce on enemy's head
     - Enemies destroyed by spike
 - Score
-    - Coin spawning
     - Coin animation
     - Score system
     - Coin tiles
+    - ~~Coin spawning~~
 - Add random tiles
     - Hold jump on jump tile to blitz through level
     - ~~Stone, coin, and jump tiles can replace cloud tiles randomly~~

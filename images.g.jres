@@ -119,6 +119,21 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "coinTile"
     },
+    "image25": {
+        "data": "hwQIAAgAAAAAiLsAgCEiCxhCJLIYRBKyKCQRtCgSIbSAIkILAIi7AA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "coin"
+    },
+    "image26": {
+        "data": "hwQIAAgAAAAAAAAAAND9Dw/Nyf39nJX8/ZyV/A/Nyf0A0P0PAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "batSleep"
+    },
+    "image27": {
+        "data": "hwQQAAgAAADQDQAA0N0AANDdAADQ3Q0A0N3dAADd3Q0A0N0NAN3dAN3d3Q3QLd0N0N3dDd0t3Q0A3d0AANDdDQDd3QDQ3Q0A",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "batFly"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

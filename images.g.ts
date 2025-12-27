@@ -307,6 +307,39 @@ f 7 4 2 2 4 7 f
 7 d 7 4 4 7 d 7 
 b d b b b b d b 
 `;
+            case "image25":
+            case "coin":return img`
+. . 8 8 8 8 . . 
+. 8 1 1 2 2 8 . 
+8 1 2 4 4 2 2 8 
+8 2 4 4 2 1 2 8 
+b 2 4 2 1 1 2 b 
+b 2 2 1 1 2 4 b 
+. b 2 2 4 4 b . 
+. . b b b b . . 
+`;
+            case "image26":
+            case "batSleep":return img`
+. . f d d f . . 
+. . . f f . . . 
+. . d c c d . . 
+. d c 9 9 c d . 
+. d 9 5 5 9 d . 
+. f c 9 9 c f . 
+. f d c c d f . 
+. . f f f f . . 
+`;
+            case "image27":
+            case "batFly":return img`
+. . . . . . . . d . . d . . . . 
+d d d d d . . . d d d d . . . d 
+d d d d d d . d d d d d d . d d 
+. d d d d d d d d 2 d 2 d d d d 
+. . . d d d d d d d d d d d d d 
+. . . . d d d d d d d d d d d . 
+. . . . . d d . d d d d . d . . 
+. . . . . . . . . . . . . . . . 
+`;
         }
         return null;
     })
